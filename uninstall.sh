@@ -22,7 +22,7 @@ read -p "Enter the location of the files: [$RUNINSTALL/y] " RUNINSTALLR
 RUNINSTALLU=${RUNINSTALLR:-$RUNINSTALL}
 
 #
-if [ "$RUNINSTALLU" == "Y" ]; then  # Prompt for a path of customization
+if [ "$RUNINSTALLU" == "y" ]; then  # Prompt for a path of customization
   PATHTOTHEME="theme"
   read -p "Enter the location where the files were installed: [$PATHTOTHEME] " PATHTOTHEMER
   PATHTOTHEMEU=${PATHTOTHEMER:-$PATHTOTHEME}
@@ -33,6 +33,10 @@ if [ "$RUNINSTALLU" == "Y" ]; then  # Prompt for a path of customization
   rm -r $PATHTOTHEMEU/scss
   rm $PATHTOTHEMEU/config.rb
   rm $PATHTOTHEMEU/Gemfile
+
+  if [ -d "$PATHTOTHEMEU/.sass-cache" ]; then
+    rm -r $PATHTOTHEMEU/.sass-cache
+  fi
 
   echo ""
   echo "Thank you running this un-install script."
