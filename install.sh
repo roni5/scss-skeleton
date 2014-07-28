@@ -25,6 +25,7 @@ PATHTOTHEMEU=${PATHTOTHEMER:-$PATHTOTHEME}
 # Copy all the files from the tmp file to the project
 cp -r $DIR/tmp/* $PATHTOTHEMEU
 
+# Append .sass-cache to the gitignore. Trust me, you do want this.
 echo .sass-cache >> $PATHTOTHEMEU/.gitignore
 
 # Now clean up the tmp
