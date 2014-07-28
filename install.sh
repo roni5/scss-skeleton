@@ -3,13 +3,12 @@
 # And then removes your installed version giving you a fresh scss and css
 # directory to start working with
 
-echo ""
-echo "This script will create and mv the directories to the proper place"
-echo ""
+echo -e "\nThis script will create and mv the directories to the proper place\n"
 
 # Set the directory for safety, so the install always occurs in the correct location
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+#Create a tmp directory to story all the necessary files.
 mkdir $DIR/tmp
 
 cp -r $DIR/scss $DIR/tmp
@@ -33,4 +32,4 @@ rm -rf $DIR/tmp
 
 # After that cp all the files into the correct place.
 
-echo "Thank you running this install script"
+echo -e "\nThank you running this install script\n"

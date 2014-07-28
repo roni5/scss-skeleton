@@ -3,9 +3,7 @@
 # And then removes your installed version giving you a fresh scss and css
 # directory to start working with
 
-echo ""
-echo "This script will delete the created directories from the install"
-echo ""
+echo -e "This script will delete the created directories from the install"
 
 # Set the directory for safety
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -38,14 +36,9 @@ if [ "$RUNINSTALLU" == "y" ]; then  # Prompt for a path of customization
     rm -r $PATHTOTHEMEU/.sass-cache
   fi
 
-  echo ""
-  echo "Thank you running this un-install script."
-  echo "If there were errors, please report them on github"
-  echo ""
+  echo "\nThank you running this un-install script.\nIf there were errors, please report them on github\n"
 else
-  echo ""
-  echo "Good for you! Keep rocking those partials!"
-  echo ""
+  echo "\nGood for you! Keep rocking those partials!\n"
 fi
 # After that cp all the files into the correct place.
 
