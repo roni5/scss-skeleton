@@ -7,10 +7,8 @@ echo ""
 echo "This script will create and mv the directories to the proper place"
 echo ""
 
-# Set the directory for safety
+# Set the directory for safety, so the install always occurs in the correct location
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-rm -rf $DIR/tmp
 
 mkdir $DIR/tmp
 
